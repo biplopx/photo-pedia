@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap');
 
+:root {
+  --primary-color: #ec5b53;
+  --hover-color: #CF332B;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #002d5b;
 }

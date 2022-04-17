@@ -1,0 +1,46 @@
+.banner {
+  width: 100%;
+  height: 600px;
+  background: url('https://i.postimg.cc/Dy6nxf8N/annie-spratt-hrq-MHFKC6g8-unsplash.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.content h4 {
+  font-size: 20px;
+}
+
+.content h1 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.content .job-title {
+  padding: 15px 20px;
+  background-color: rgba(239, 56, 36, 0.15);
+  color: #EF3724;
+  text-shadow: 0 2px 4px rgb(23 25 37 / 40%);
+  font-size: 16px;
+  border-radius: 40px;
+}
