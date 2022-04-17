@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="content">
         <h4>Welcome</h4>
         <h1>I'm MD <span style={{ color: "var(--primary-color)" }}>Biplop</span> Hossain</h1>
-        <div class="job-title">Professional Photographer</div>
+        <div className="job-title">Professional Photographer</div>
       </div>
     </section>
   );

@@ -1,0 +1,7 @@
+.vp-btn {
+  background-color: var(--primary-color);
+}
+
+.vp-btn:hover {
+  background-color: var(--hover-color);
+}

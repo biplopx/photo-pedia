@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Model Photoshoot",
+    "description": "best photography services",
+    "price": 200,
+    "image": "https://i.postimg.cc/MGVsYDDm/model-photography.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Product Photoshoot",
+    "description": "best photography services",
+    "price": 300,
+    "image": "https://i.postimg.cc/yNg7VkHb/product-photoshoot.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Event Photoshoot",
+    "description": "best photography services",
+    "price": 400,
+    "image": "https://i.postimg.cc/nhwHbq6m/event-photoshoot.jpg"
+  }
+]
