@@ -10,8 +10,8 @@ const Services = () => {
       .then(data => setservices(data))
   }, [])
   return (
-    <section className='py-4'>
-      <h2 className='text-center fw-bold mb-4'>Services</h2>
+    <section className='py-5'>
+      <h2 className='text-center fw-bold mb-5'>Services</h2>
       <div className="container">
         <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
           {
