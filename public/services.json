@@ -2,21 +2,21 @@
   {
     "id": 1,
     "name": "Model Photoshoot",
-    "description": "best photography services",
+    "description": "Make your modeling career with beautiful photoshoot. I provide model portfolio photo shoot.",
     "price": 200,
     "image": "https://i.postimg.cc/MGVsYDDm/model-photography.jpg"
   },
   {
     "id": 2,
     "name": "Product Photoshoot",
-    "description": "best photography services",
+    "description": "I provide professional hight quality product photography worldwide for online stores and other companies.",
     "price": 300,
     "image": "https://i.postimg.cc/yNg7VkHb/product-photoshoot.jpg"
   },
   {
     "id": 3,
     "name": "Event Photoshoot",
-    "description": "best photography services",
+    "description": "I offer professional event photography services to capture the moments you won't want to forget on any special occasion.",
     "price": 400,
     "image": "https://i.postimg.cc/nhwHbq6m/event-photoshoot.jpg"
   }

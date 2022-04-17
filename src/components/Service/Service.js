@@ -8,7 +8,7 @@ const Service = ({ service }) => {
     <div className="col">
       <div className="card">
         <img src={image} className="card-img-top" alt="..." />
-        <div className="card-body">
+        <div className="card-body text-center">
           <h5 className="card-title fs-4 fw-bold">{name}</h5>
           <p className="card-text">{description}</p>
           <h6 className='fs-6 fw-bold mb-4'>Price: ${price}</h6>
