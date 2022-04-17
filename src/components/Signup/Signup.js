@@ -38,7 +38,7 @@ const Signup = () => {
 
   // user signup error handle
   if (error) {
-    errorShow = <p className='text-danger'>Error: {error?.message}</p>
+    errorShow = <div className="alert alert-danger my-3" role="alert">Error: {error?.message}</div>
   }
 
   // if user exits 
