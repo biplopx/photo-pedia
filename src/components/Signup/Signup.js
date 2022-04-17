@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Signup.css';
+import SocialLoign from '../SocialLogin/SocialLoign';
 
 
 const Signup = () => {
@@ -51,7 +52,6 @@ const Signup = () => {
     event.preventDefault();
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
-    console.log('Updated profile');
     navigate('/home');
   }
 
@@ -65,21 +65,23 @@ const Signup = () => {
               <form onSubmit={handleSignup}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Name</label>
-                  <input onBlur={handleNameBlur} type="name" className="form-control" id="name" />
+                  <input onBlur={handleNameBlur} type="name" className="form-control" id="name" required />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email address</label>
-                  <input onBlur={handleEmailBlur} type="email" className="form-control" id="email" />
+                  <input onBlur={handleEmailBlur} type="email" className="form-control" id="email" required />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">Password</label>
-                  <input onBlur={handlePasswordBlur} type="password" className="form-control" id="password" />
+                  <input onBlur={handlePasswordBlur} type="password" className="form-control" id="password" required />
                 </div>
                 <button type="submit" className="btn w-100 text-white vp-btn">Login</button>
               </form>
               {errorShow}
               <p className='mt-3 pe-auto'>Already have account? <Link to='/login' className='text-danger'>Please Login</Link></p>
+              <SocialLoign></SocialLoign>
             </div>
+
           </div>
         </div>
       </div>

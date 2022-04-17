@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import SocialLoign from '../SocialLogin/SocialLoign';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -66,18 +67,18 @@ const Login = () => {
               <form onSubmit={handleLogin}>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email address</label>
-                  <input onBlur={handleEmailBlur} type="email" className="form-control none-outline" id="email" />
+                  <input onBlur={handleEmailBlur} type="email" className="form-control none-outline" id="email" required />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">Password</label>
-                  <input onBlur={handlePasswordBlur} type="password" className="form-control" id="password" />
+                  <input onBlur={handlePasswordBlur} type="password" className="form-control" id="password" required />
                 </div>
                 <button type="submit" className="btn w-100 text-white vp-btn">Login</button>
               </form>
               {loginError}
               <p className='mt-3 pe-auto'>New to Genius Car <Link to='/signup'>Please Register</Link></p>
-              <p>Forget Password? <button className='btn p-0 btn-link text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
-
+              <p>Forget Password? <button style={{ color: 'var(--primary-color)' }} className='btn p-0 btn-link text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+              <SocialLoign></SocialLoign>
             </div>
           </div>
         </div>

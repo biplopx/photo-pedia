@@ -8,7 +8,7 @@ const Services = () => {
     fetch('services.json')
       .then(res => res.json())
       .then(data => setservices(data))
-  }, [])
+  }, [services])
   return (
     <section className='py-5'>
       <h2 className='text-center fw-bold mb-5'>Services</h2>
