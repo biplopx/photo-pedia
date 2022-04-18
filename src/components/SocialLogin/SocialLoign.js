@@ -15,7 +15,7 @@ const SocialLoign = () => {
     if (user) {
       navigate('/');
     }
-  }, [user])
+  }, [user, navigate])
 
   if (loading) {
     return <Loading></Loading>
