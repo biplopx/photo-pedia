@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import './Signup.css';
 import SocialLoign from '../SocialLogin/SocialLoign';
 import Loading from '../Loading/Loading';
+import { toast } from 'react-toastify';
 
 
 const Signup = () => {
@@ -50,7 +51,7 @@ const Signup = () => {
 
   // if user exits 
   if (user) {
-    console.log(user)
+    toast('Signup Succesful')
   }
 
   // User registration function
