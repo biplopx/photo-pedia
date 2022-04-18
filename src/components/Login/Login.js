@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import SocialLoign from '../SocialLogin/SocialLoign';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   let loginError;
 
 
@@ -31,8 +34,13 @@ const Login = () => {
     setPassword(event.target.value);
   }
 
+  // Loading
+  if (loading) {
+    return <Loading></Loading>
+  }
+
   if (user) {
-    navigate('/');
+    navigate(from, { replace: true });
   }
 
   // login error

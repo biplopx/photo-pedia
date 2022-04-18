@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Signup.css';
 import SocialLoign from '../SocialLogin/SocialLoign';
+import Loading from '../Loading/Loading';
 
 
 const Signup = () => {
@@ -34,6 +35,11 @@ const Signup = () => {
 
   const handlePasswordBlur = event => {
     setPassword(event.target.value);
+  }
+
+  // Loading
+  if (loading) {
+    return <Loading></Loading>
   }
 
 
@@ -81,7 +87,6 @@ const Signup = () => {
               <p className='mt-3 pe-auto'>Already have account? <Link to='/login' className='text-danger'>Please Login</Link></p>
               <SocialLoign></SocialLoign>
             </div>
-
           </div>
         </div>
       </div>
