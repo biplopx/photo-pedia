@@ -27,7 +27,6 @@ const SocialLoign = () => {
   }
 
 
-
   return (
     <div>
       <div className="row">
