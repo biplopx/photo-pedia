@@ -1,4 +1,6 @@
-# Photo Pedida - Cature your sweet memories in frames
+# Photo Pedia - Cature your sweet memories in frames
+
+Name: Photo Pedia
 
 Live Website: [https://photo-pedia.web.app/](https://photo-pedia.web.app/).
 
