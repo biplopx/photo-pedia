@@ -1,0 +1,12 @@
+.about-me {
+  display: inline-block;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}

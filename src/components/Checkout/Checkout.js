@@ -23,19 +23,27 @@ const Checkout = () => {
   // handle Submit
   const handleCheckoutSumbit = event => {
     event.preventDefault();
-    toast(`Your Address: ${address} Your Phone: ${phone} Thank You For Order`)
+    toast(`Your Address: ${address} Your Phone: ${phone} (Thank You For Booking)`)
   }
   return (
     <section className='py-5'>
       <div className="container">
         <div className="row">
           <div className="col col-sm-8 col-lg-4 col-md-6 mx-auto">
-            <div className='p-3 border rounded-3 mb-3'>
-              <h4>Your Order</h4>
-              Service: {service?.name}
-            </div>
+            {/* <div className='p-3 border rounded-3 mb-3'>
+              <h3 className='form-title fs-4 text-center mb-3'>You are booking</h3>
+              <p><strong>Service:</strong> {service?.name}</p>
+              <p><strong>Price:</strong> ${service?.price}</p>
+            </div> */}
             <div className='p-3 border rounded-3'>
-              <h3 className='form-title fs-4 text-center mb-3'>Checkout</h3>
+              <h3 className='form-title fs-4 text-center mb-3'>You are booking</h3>
+              <p><strong>Service:</strong> {service?.name}</p>
+              <p><strong>Price:</strong> ${service?.price}</p>
+              <div className="row">
+                <div className="col"><hr /></div>
+                <div className="col-auto">Please fill up details</div>
+                <div className="col"> <hr /> </div>
+              </div>
               <form onSubmit={handleCheckoutSumbit}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Name</label>

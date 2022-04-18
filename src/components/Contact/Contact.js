@@ -26,7 +26,7 @@ const Contact = () => {
 
           </div>
           <div className="col rounded-3 border p-3">
-            <h3 className='fw-bold mb-3'>Location</h3>
+            <h3 className='fw-bold mb-4'>Location</h3>
             <p><strong>Address:</strong> House No.420, Shantahar Road, Bogura, Bangladesh</p>
             <p><strong>Phone:</strong> 0185200000</p>
             <p><strong>Email:</strong> contact@photopedia.com</p>
