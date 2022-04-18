@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
@@ -34,22 +34,28 @@ const Login = () => {
     setPassword(event.target.value);
   }
 
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+      console.log(user)
+    }
+  }, [user, navigate, from])
+
   // Loading
   if (loading) {
     return <Loading></Loading>
   }
 
-  if (user) {
-    navigate(from, { replace: true });
-  }
+
 
   // login error
   if (error) {
     loginError = <div className="alert alert-danger my-3" role="alert">Error: {error?.message}</div>
   }
 
+
   // Handle login
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
   }
@@ -64,6 +70,8 @@ const Login = () => {
       toast('please enter your email address');
     }
   }
+
+
 
   return (
     <section className='py-5'>

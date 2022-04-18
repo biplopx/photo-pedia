@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -7,6 +8,8 @@ const Checkout = () => {
   const [user] = useAuthState(auth);
   const [address, setAdress] = useState('');
   const [phone, setPhone] = useState('');
+  const { state } = useLocation();
+  const { service } = state;
 
   //handle address
   const handleAddressBlur = event => {
@@ -27,6 +30,10 @@ const Checkout = () => {
       <div className="container">
         <div className="row">
           <div className="col col-sm-8 col-lg-4 col-md-6 mx-auto">
+            <div className='p-3 border rounded-3 mb-3'>
+              <h4>Your Order</h4>
+              Service: {service?.name}
+            </div>
             <div className='p-3 border rounded-3'>
               <h3 className='form-title fs-4 text-center mb-3'>Checkout</h3>
               <form onSubmit={handleCheckoutSumbit}>

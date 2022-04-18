@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
-  const { name, image, description, price } = service;
+  const { id, name, image, description, price } = service;
   const navigate = useNavigate();
   const navigateToCheckout = () => {
-    navigate('/checkout');
+    navigate('/checkout', { state: { service: service } })
   }
 
   return (

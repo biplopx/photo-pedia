@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const SocialLoign = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
   let errorShow;
 
+
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, [user])
+
+  if (loading) {
+    return <Loading></Loading>
+  }
+
   // user signup error handle
   if (error) {
     errorShow = <div className="alert alert-danger my-3" role="alert">Error: {error?.message}</div>
   }
 
-  // user exits
-  if (user) {
-    navigate('/')
-  }
+
 
   return (
     <div>
